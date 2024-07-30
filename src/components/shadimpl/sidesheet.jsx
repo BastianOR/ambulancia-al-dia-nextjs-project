@@ -20,7 +20,7 @@ export default function SideSheet() {
   const today = todaysDate();
   const tomonth = todaysMonth();
 
-  //fetch the current user's username and store it
+  //fetch the current user's username and store it to render it later
   const [currentUsername, setCurrentUsername] = useState("");
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function SideSheet() {
             <span><SheetClose asChild><Link href={"/"}>Inicio</Link></SheetClose></span>
             <span><SheetClose asChild><Link href={`/agenda?day=${today}&month=${tomonth}`}>Agenda</Link></SheetClose></span>
             <span><SheetClose asChild><Link href={"/completados"}>Completados</Link></SheetClose></span>
-            <span><SheetClose asChild><a href={"https://github.com/BastianOR/ambulancia-al-dia-nextjs-project"}>Repositorio</a></SheetClose></span>
+            <span><SheetClose asChild><a rel="noopener noreferrer" target="_blank" href={"https://github.com/BastianOR/ambulancia-al-dia-nextjs-project"}>Repositorio</a></SheetClose></span>
           </div>
         </SheetContent>
       </Sheet>
