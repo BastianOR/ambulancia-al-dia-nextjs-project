@@ -6,6 +6,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose
 } from "@/components/ui/sheet";
 import { AlignLeft } from "lucide-react";
 import { SignOutButton, SignedOut, SignedIn } from "@clerk/nextjs";
@@ -56,10 +57,10 @@ export default function SideSheet() {
           </SheetHeader>
           {/* A series of links, including one that goes to today's booking: */}
           <div className="side-menu-links">
-            <Link href={"/"}>Inicio</Link>
-            <Link href={`/agenda?day=${today}&month=${tomonth}`}>Agenda</Link>
-            <Link href={"/completados"}>Completados</Link>
-            <a href={"/"}>Repositorio</a>
+            <span><SheetClose asChild><Link href={"/"}>Inicio</Link></SheetClose></span>
+            <span><SheetClose asChild><Link href={`/agenda?day=${today}&month=${tomonth}`}>Agenda</Link></SheetClose></span>
+            <span><SheetClose asChild><Link href={"/completados"}>Completados</Link></SheetClose></span>
+            <span><SheetClose asChild><a href={"https://github.com/BastianOR/ambulancia-al-dia-nextjs-project"}>Repositorio</a></SheetClose></span>
           </div>
         </SheetContent>
       </Sheet>
