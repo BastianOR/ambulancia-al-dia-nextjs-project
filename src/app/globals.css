@@ -78,19 +78,21 @@ body {
 }
 body nav{
   width: 100%;
-  background-color: rgb(173, 81, 81);
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
 }
 body nav .wrapper{
-  width: clamp(330px, 98vw, 3000px);
+  width: clamp(320px, 90vw, 3000px);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
 }
 footer{
   width: 100%;
   padding-bottom: 16px;
-  background-color: #acacac;
+  background-color: #d0d0d0;
   @apply text-sm;
   @apply px-3;
 }
@@ -116,4 +118,9 @@ footer a{
 }
 .side-menu-links a:hover{
   background-color: #f1f1f1;
+}
+/* Class for the UserButton component from Clerk: */
+.cl-avatarBox {
+  width: 2.5rem;
+  height: 2.5rem;
 }

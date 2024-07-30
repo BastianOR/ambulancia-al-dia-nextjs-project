@@ -36,7 +36,7 @@ export default function SideSheet() {
     <div className="SideSheet">
       <Sheet>
         <SheetTrigger>
-          <AlignLeft />
+          <AlignLeft size={42} strokeWidth={3} color="#777e81"/>
         </SheetTrigger>
         <SheetContent side="left" className="w-[320px] sm:w-[620px]">
           <SheetHeader>
