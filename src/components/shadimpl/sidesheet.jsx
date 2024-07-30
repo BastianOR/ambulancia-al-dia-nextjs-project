@@ -6,16 +6,19 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-  SheetClose
+  SheetClose,
 } from "@/components/ui/sheet";
 import { AlignLeft } from "lucide-react";
 import { SignOutButton, SignedOut, SignedIn } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
 import { todaysMonth, todaysDate } from "@/lib/dateutils";
 import Link from "next/link";
+import { Github } from "lucide-react";
+import { ListCheck } from "lucide-react";
+import { Calendar } from "lucide-react";
+import { House } from "lucide-react";
 
 export default function SideSheet() {
-
   //Get the date and month
   const today = todaysDate();
   const tomonth = todaysMonth();
@@ -36,20 +39,27 @@ export default function SideSheet() {
     <div className="SideSheet">
       <Sheet>
         <SheetTrigger>
-          <AlignLeft size={42} strokeWidth={3} color="#777e81"/>
+          <AlignLeft size={42} strokeWidth={3} color="#777e81" />
         </SheetTrigger>
         <SheetContent side="left" className="w-[320px] sm:w-[620px]">
           <SheetHeader>
             {/* When signed in, see the username, else, you're called Guest in spanish */}
             <SheetTitle>
-              <SignedIn>{currentUsername}</SignedIn>
-              <SignedOut><h3>Invitado</h3></SignedOut>
+              <div className="mt-3"></div>
+              <SignedIn>
+                <span className="text-2xl">{currentUsername}</span>
+              </SignedIn>
+              <SignedOut>
+                <h3 className="text-2xl">Invitado</h3>
+              </SignedOut>
             </SheetTitle>
             <SheetDescription>
               {/* When signed in, you can sign out. Else, receive a message to sign in. */}
               <SignedIn>
                 <SignOutButton>
-                  <span className="text-cyan-600 hover:cursor-pointer">Salir</span>
+                  <span className="text-cyan-600 hover:cursor-pointer text-lg">
+                    Salir
+                  </span>
                 </SignOutButton>
               </SignedIn>
               <SignedOut>Entra a tu cuenta para agendar traslados.</SignedOut>
@@ -57,10 +67,44 @@ export default function SideSheet() {
           </SheetHeader>
           {/* A series of links, including one that goes to today's booking: */}
           <div className="side-menu-links">
-            <span><SheetClose asChild><Link href={"/"}>Inicio</Link></SheetClose></span>
-            <span><SheetClose asChild><Link href={`/agenda?day=${today}&month=${tomonth}`}>Agenda</Link></SheetClose></span>
-            <span><SheetClose asChild><Link href={"/completados"}>Completados</Link></SheetClose></span>
-            <span><SheetClose asChild><a rel="noopener noreferrer" target="_blank" href={"https://github.com/BastianOR/ambulancia-al-dia-nextjs-project"}>Repositorio</a></SheetClose></span>
+            <span>
+              <SheetClose asChild>
+                <Link href={"/"}>
+                  <House />
+                  <b>Inicio</b>
+                </Link>
+              </SheetClose>
+            </span>
+            <span>
+              <SheetClose asChild>
+                <Link href={`/agenda?day=${today}&month=${tomonth}`}>
+                  <Calendar />
+                  <b>Agenda</b>
+                </Link>
+              </SheetClose>
+            </span>
+            <span>
+              <SheetClose asChild>
+                <Link href={"/completados"}>
+                  <ListCheck />
+                  <b>Completados</b>
+                </Link>
+              </SheetClose>
+            </span>
+            <span>
+              <SheetClose asChild>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={
+                    "https://github.com/BastianOR/ambulancia-al-dia-nextjs-project"
+                  }
+                >
+                  <Github />
+                  <b>Repositorio</b>
+                </a>
+              </SheetClose>
+            </span>
           </div>
         </SheetContent>
       </Sheet>

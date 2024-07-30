@@ -4,8 +4,8 @@ import {
   SignInButton,
   SignedOut,
   SignedIn,
-  SignIn,
 } from "@clerk/nextjs";
+import "@/styles/home.css";
 
 export default function Home() {
   return (

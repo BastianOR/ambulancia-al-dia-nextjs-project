@@ -14,6 +14,6 @@ export default function AgendaButton() {
   }
 
   return (
-    <button onClick={() => {redirectToUrl(day, month)}}>Ir a la agenda!</button>
+    <button onClick={() => {redirectToUrl(day, month)}}>Abrir agenda</button>
   );
 }
