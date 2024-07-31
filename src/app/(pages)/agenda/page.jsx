@@ -1,5 +1,8 @@
 "use client";
 import { useSearchParams } from "next/navigation";
+import "@/styles/agenda.css";
+import DaySelect from "@/components/shadimpl/dayselect";
+import MonthSelect from "@/components/shadimpl/monthselect";
 
 export default function AgendaPage() {
 
@@ -9,8 +12,17 @@ export default function AgendaPage() {
 
   return (
     <div className="AgendaPage">
-        <h1>Im Pomu!</h1>
-        <p>Today is {queryday} of {querymonth}</p>
+        <h1>Agenda</h1>
+        <p>Estás viendo la agenda del:<br />{queryday} de {querymonth}</p>
+        <div className="date-picker">
+          <DaySelect defaultDay={queryday} />
+          <div className="select-separator"></div>
+          <MonthSelect defaultMonth={querymonth} />
+        </div>
+        <button className="cta-btn">Cambiar fecha</button>
+        <div className="add-button-container">
+          <button className="secondary-btn">+ Nuevo traslado</button>
+        </div>
     </div>
   );
 }

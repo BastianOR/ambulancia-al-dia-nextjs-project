@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <h1>Ambulancia al Día</h1>
         <p>
-          Tu aplicación para agendar traslados en ambulancia, fácil y gratis.
+          Tu aplicación para agendar traslados en ambulancia.
         </p>
         <div className="landing-bottom">
           <SignedOut>

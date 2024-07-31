@@ -14,6 +14,6 @@ export default function AgendaButton() {
   }
 
   return (
-    <button onClick={() => {redirectToUrl(day, month)}}>Abrir agenda</button>
+    <button className="cta-btn" onClick={() => {redirectToUrl(day, month)}}>Abrir agenda</button>
   );
 }
