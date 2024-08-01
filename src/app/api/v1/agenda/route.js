@@ -8,9 +8,12 @@ const getCurrentUser = async () => {
     return user?.id;
 }
 
-export async function GET(){
+export async function GET(request){
+    const searchParams = request.nextUrl.searchParams
+    const qday = searchParams.get('day');
+    const qmonth = searchParams.get('month');
     connectDb();
     const signedUser = await getCurrentUser() + "";
-    const retrievedTransfers = await Transfer.find({completed: false, scheduler: signedUser});
+    const retrievedTransfers = await Transfer.find({completed: false, scheduler: signedUser, day: qday, month: qmonth});
     return NextResponse.json(retrievedTransfers);
 }

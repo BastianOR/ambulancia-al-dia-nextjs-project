@@ -6,9 +6,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export default function MonthSelect({ defaultMonth }) {
+export default function MonthSelect({ defaultMonth, onMonthChange }) {
   return (
-    <Select defaultValue={defaultMonth}>
+    <Select defaultValue={defaultMonth} onValueChange={onMonthChange}>
       <SelectTrigger className="w-[140px] text-lg">
         <SelectValue placeholder="Día" />
       </SelectTrigger>

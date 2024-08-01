@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function Booking({ qday, qmonth }) {
   
-  const query = "/api/v1/agenda?scheduler=day=" + qday + "&month=" + qmonth + "&completed=false";
+  const query = "/api/v1/agenda?day=" + qday + "&month=" + qmonth + "&completed=false";
 
   const [bookitems, setBookitems] = useState([]);
 
