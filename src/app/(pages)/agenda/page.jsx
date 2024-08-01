@@ -25,7 +25,7 @@ export default function AgendaPage() {
         <div className="add-button-container">
           <Link href={"/nueva-agenda"}><button className="secondary-btn">+ Nuevo traslado</button></Link>
         </div>
-        <Booking/>
+        <Booking qday={queryday} qmonth={querymonth}/>
     </div>
   );
 }
