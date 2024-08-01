@@ -17,3 +17,8 @@ export async function GET(request){
     const retrievedTransfers = await Transfer.find({completed: false, scheduler: signedUser, day: qday, month: qmonth});
     return NextResponse.json(retrievedTransfers);
 }
+
+export async function POST(request){
+    console.log(request);
+    return NextResponse.json({ message: "redacted" });
+}
