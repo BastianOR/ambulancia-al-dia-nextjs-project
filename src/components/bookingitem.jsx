@@ -3,7 +3,8 @@ import "@/styles/booking.css";
 import { CircleUserRound, Phone, Accessibility, Check } from "lucide-react";
 import { useState } from "react";
 
-export default function BookingItem() {
+export default function BookingItem({ address, time, patient, contact, tools }) {
+
   const [currentBottom, setCurrentBottom] = useState("booking-item-hide");
 
   const handleClick = () => {
@@ -17,21 +18,21 @@ export default function BookingItem() {
   return (
     <div className="booking-item">
       <div className="booking-item-top" onClick={handleClick}>
-        <h2>Genaro Gallo con Tomas Bunilla</h2>
-        <h3>18:24</h3>
+        <h2>{address}</h2>
+        <h3>{time}</h3>
       </div>
       <div className={"booking-item-bottom " + currentBottom}>
         <div className="booking-item-data">
           <CircleUserRound size={16} />
-          <span>Maria José Quintanilla</span>
+          <span>{patient}</span>
         </div>
         <div className="booking-item-data">
           <Phone size={16} />
-          <span>+56 9 4118 5969</span>
+          <span>{contact}</span>
         </div>
         <div className="booking-item-data">
           <Accessibility size={16} />
-          <span>Silla de ruedas</span>
+          <span>{tools}</span>
         </div>
         <button>Traslado completado</button>
       </div>
