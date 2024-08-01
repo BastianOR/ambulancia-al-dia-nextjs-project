@@ -3,6 +3,8 @@ import { useSearchParams } from "next/navigation";
 import "@/styles/agenda.css";
 import DaySelect from "@/components/shadimpl/dayselect";
 import MonthSelect from "@/components/shadimpl/monthselect";
+import Link from "next/link";
+import Booking from "@/components/booking";
 
 export default function AgendaPage() {
 
@@ -21,8 +23,9 @@ export default function AgendaPage() {
         </div>
         <button className="cta-btn">Cambiar fecha</button>
         <div className="add-button-container">
-          <button className="secondary-btn">+ Nuevo traslado</button>
+          <Link href={"/nueva-agenda"}><button className="secondary-btn">+ Nuevo traslado</button></Link>
         </div>
+        <Booking/>
     </div>
   );
 }

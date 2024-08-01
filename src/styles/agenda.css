@@ -8,6 +8,7 @@
 }
 .AgendaPage p{
     @apply px-2;
+    @apply text-base;
     text-align: center;
 }
 .date-picker{
@@ -24,7 +25,8 @@
 .add-button-container{
     @apply mt-12;
     @apply mb-1;
-    width: clamp(280px, 90%, 350px);
+    padding-right: 4px;
+    width: clamp(300px, 96%, 550px);
     display: flex;
     flex-direction: row-reverse;
 }

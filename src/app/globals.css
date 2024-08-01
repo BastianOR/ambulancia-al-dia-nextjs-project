@@ -157,7 +157,7 @@ footer a{
   color: white;
 }
 .secondary-btn{
-  @apply text-xl;
+  @apply text-base;
   @apply font-semibold;
   color: #ef3636;
 }
