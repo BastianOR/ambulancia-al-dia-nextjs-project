@@ -24,7 +24,7 @@ export async function POST(request){
         const data = await request.json();
         const newTransfer = new Transfer(data);
         newTransfer.scheduler = signedUser;
-        console.log(newTransfer);
+        await newTransfer.save();
         return NextResponse.json({ message: "nice" });
     } catch (err){
         return NextResponse.json(err.message, {status: 400});

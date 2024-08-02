@@ -26,7 +26,7 @@ export default function Booking({ qday, qmonth }) {
           time={item.time}
           patient={item.patient}
           contact={item.contact}
-          tools={item.tools}
+          tools={item.tool}
         />
       ))}
     </div>
