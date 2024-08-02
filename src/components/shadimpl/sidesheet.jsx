@@ -7,11 +7,11 @@ import {
   SheetTitle,
   SheetTrigger,
   SheetClose,
-} from "@/components/ui/sheet";
+} from "../ui/sheet";
 import { AlignLeft } from "lucide-react";
 import { SignOutButton, SignedOut, SignedIn } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
-import { todaysMonth, todaysDate } from "@/lib/dateutils";
+import { todaysMonth, todaysDate } from "../../lib/dateutils";
 import Link from "next/link";
 import { Github } from "lucide-react";
 import { ListCheck } from "lucide-react";

@@ -4,7 +4,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "../../components/ui/select";
 
 const daysloop = [];
 
@@ -12,7 +12,7 @@ for (let counter = 1; counter < 32; counter++) {
   daysloop[counter - 1] = counter;
 }
 
-export default function DaySelect({ defaultDay, width, onDayChange }) {
+export default function DaySelect({ defaultDay, onDayChange }) {
 
     const renderedDays = daysloop.map((day, index) => (
         <SelectItem key={index} className="text-lg mb-1" value={"" + day}>{day}</SelectItem>

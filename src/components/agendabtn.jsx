@@ -1,6 +1,6 @@
 "use client";
-import "@/styles/home.css";
-import { todaysDate, todaysMonth } from "@/lib/dateutils";
+import "../styles/home.css";
+import { todaysDate, todaysMonth } from "../lib/dateutils";
 
 /* This is a client component which returns a button that redirects the user to the agenda page, 
 while also taking into account the user's current date. */

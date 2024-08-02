@@ -1,11 +1,11 @@
-import AgendaButton from "@/components/agendabtn";
+import AgendaButton from "../components/agendabtn";
 import {
   SignUpButton,
   SignInButton,
   SignedOut,
   SignedIn,
 } from "@clerk/nextjs";
-import "@/styles/home.css";
+import "../styles/home.css";
 
 export default function Home() {
   return (

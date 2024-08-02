@@ -4,13 +4,13 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "../../components/ui/select";
 
 export default function MonthSelect({ defaultMonth, onMonthChange }) {
   return (
     <Select defaultValue={defaultMonth} onValueChange={onMonthChange}>
       <SelectTrigger className="w-[140px] text-lg">
-        <SelectValue placeholder="Día" />
+        <SelectValue placeholder="Mes" />
       </SelectTrigger>
       <SelectContent>
         <SelectItem className="text-lg mb-1" value="enero">enero</SelectItem>

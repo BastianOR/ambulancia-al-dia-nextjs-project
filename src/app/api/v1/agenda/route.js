@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { connectDb } from "@/lib/mongocon";
-import { Transfer } from "@/models/transfer";
+import { connectDb } from "../../../../lib/mongocon";
+import { Transfer } from "../../../../models/transfer";
 import { currentUser } from "@clerk/nextjs/server";
 
 const getCurrentUser = async () => {
@@ -19,6 +19,14 @@ export async function GET(request){
 }
 
 export async function POST(request){
-    console.log(request);
-    return NextResponse.json({ message: "redacted" });
+    try{
+        const signedUser = await getCurrentUser() + "";
+        const data = await request.json();
+        const newTransfer = new Transfer(data);
+        newTransfer.scheduler = signedUser;
+        console.log(newTransfer);
+        return NextResponse.json({ message: "nice" });
+    } catch (err){
+        return NextResponse.json(err.message, {status: 400});
+    }
 }

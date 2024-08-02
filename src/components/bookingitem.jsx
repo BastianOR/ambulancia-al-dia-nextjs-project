@@ -1,5 +1,5 @@
 "use client";
-import "@/styles/booking.css";
+import "../styles/booking.css";
 import { CircleUserRound, Phone, Accessibility, Check } from "lucide-react";
 import { useState } from "react";
 

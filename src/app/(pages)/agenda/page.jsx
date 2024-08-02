@@ -1,10 +1,10 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import "@/styles/agenda.css";
-import DaySelect from "@/components/shadimpl/dayselect";
-import MonthSelect from "@/components/shadimpl/monthselect";
+import "../../../styles/agenda.css";
+import DaySelect from "../../../components/shadimpl/dayselect";
+import MonthSelect from "../../../components/shadimpl/monthselect";
 import Link from "next/link";
-import Booking from "@/components/booking";
+import Booking from "../../../components/booking";
 import { useState } from "react";
 
 export default function AgendaPage() {

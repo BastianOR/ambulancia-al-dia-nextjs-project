@@ -1,8 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import MobileNav from "@/components/mobilenav";
-import Foot from "@/components/foot";
+import Foot from "../components/foot";
+import MobileNav from "../components/mobilenav";
+
 
 const inter = Inter({ subsets: ["latin"] });
 

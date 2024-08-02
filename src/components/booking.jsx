@@ -1,5 +1,5 @@
 "use client";
-import "@/styles/booking.css";
+import "../styles/booking.css";
 import BookingItem from "./bookingitem";
 import { useEffect, useState } from "react";
 

@@ -161,3 +161,11 @@ footer a{
   @apply font-semibold;
   color: #ef3636;
 }
+.cancel-btn{
+  color: black;
+  @apply text-xl;
+  @apply font-semibold;
+  @apply px-6;
+  @apply py-1;
+  cursor: pointer;
+}
