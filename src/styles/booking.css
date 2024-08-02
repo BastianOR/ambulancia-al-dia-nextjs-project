@@ -1,6 +1,9 @@
 .Booking{
     width: clamp(300px, 96%, 550px);
-    background-color: slategray;
+    height: 495px;
+    overflow: scroll;
+    /*min-height: 54vh;*/
+    background-color: #4d6a718a;
     margin-bottom: 20px;
 }
 .booking-item-top {
